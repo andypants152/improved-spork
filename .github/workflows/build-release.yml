@@ -1,0 +1,21 @@
+name: Build and Release
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Build gbdk project
+    steps:
+    - name: Checkout project
+      uses: actions/checkout@v2
+    - name: Build
+      uses: ./ # This is only here because the actions is in this repository
+      with:
+        subdirectory: ./test-sources
+    - name: Upload binary to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: ./test-sources/game.gb # This is kind of weird a.t.m. 
+        asset_name: ROM # Rename this to what ever you want
+        tag: ${{ github.ref }}
