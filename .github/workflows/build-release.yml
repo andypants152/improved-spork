@@ -9,9 +9,9 @@ jobs:
     - name: Checkout project
       uses: actions/checkout@v2
     - name: Build
-      uses: ./githubBuild # This is only here because the actions is in this repository
+      uses: ./githubBuild/ # This is only here because the actions is in this repository
       with:
-        subdirectory: ./test-sources
+        subdirectory: ./
     - name: Upload binary to release
       uses: svenstaro/upload-release-action@v2
       with:
