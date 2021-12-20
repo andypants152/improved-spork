@@ -9,7 +9,7 @@ jobs:
     - name: Checkout project
       uses: actions/checkout@v2
     - name: Build
-      uses: ./ # This is only here because the actions is in this repository
+      uses: ./githubBuild # This is only here because the actions is in this repository
       with:
         subdirectory: ./test-sources
     - name: Upload binary to release
