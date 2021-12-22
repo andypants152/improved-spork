@@ -16,6 +16,6 @@ jobs:
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: ./test-sources/game.gb # This is kind of weird a.t.m. 
+        file: ./game.gb # This is kind of weird a.t.m. 
         asset_name: ROM # Rename this to what ever you want
         tag: ${{ github.ref }}
