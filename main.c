@@ -57,6 +57,9 @@ screen_t Smiles(){
             //waitpad(J_START);
             return SPLASH;
             break;
+        default:
+            return SMILES;
+            break;
     }
 
 }
