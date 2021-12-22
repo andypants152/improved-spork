@@ -1,5 +1,5 @@
 # Container image that runs your code
-FROM gcc
+# FROM gcc
 
 ADD https://github.com/gbdk-2020/gbdk-2020/releases/download/4.0.5/gbdk-linux64.tar.gz /usr/lib/gbd.tar.gz
 RUN tar -xvf /usr/lib/gbd.tar.gz -C /usr/lib/
