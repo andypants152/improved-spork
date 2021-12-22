@@ -4,8 +4,33 @@
 
 /**
  * 
- * The Cloud uses 1.0.4 GBDK which doesn't scroll the same and jumps to hello world
+ * The begining?PROJECT whoam1liI
  *  
+ * what do you see?
+ * 
+ * A
+ * B
+ * C
+ * D
+ * 
+ * what do you hear?
+ * 
+ * AA, AB, AC, AD
+ * BA, BB, BC, BD
+ * CA, CB, CC, CD
+ * DA, DB, DC, DD
+ * 
+ * Date of Birth
+ * 
+ * Day, Month, Year
+ * Year, Month, Day
+ * Month, Day, Year
+ * Year?12021??12022
+ * 
+ * Who's the Boss?
+ * [input NAME]
+ * 
+ * ENTER GAME:::.:.:.::;**;**;,,***,,
  * 
  * **/
 
@@ -54,10 +79,11 @@ screen_t Smiles(){
     
         case J_START:
             printf("DON'T LOOK");
-            //waitpad(J_START);
+            waitpad(J_START);
             return SPLASH;
             break;
         default:
+            waiting(255);
             return SMILES;
             break;
     }
@@ -65,12 +91,12 @@ screen_t Smiles(){
 }
 
 screen_t Splash(){
-  font_t min_font;
-    font_init();
+    //font_t min_font;
+    //font_init();
     //ibm_font = font_load(font_ibm);  /* 96 tiles */
     //italic_font = font_load(font_italic);   /* 93 tiles */
-    min_font = font_load(font_min); // 36 tile
-    font_set(min_font);
+    //min_font = font_load(font_min); // 36 tile
+    //font_set(min_font);
     printf("\nBonne Nuit \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n PRESS START TO\n Restart");
     //TODO: swap out printf for tile placement
     waitpad(J_START);
