@@ -17,6 +17,6 @@ jobs:
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: ./game.gb # This is kind of weird a.t.m. 
-        asset_name: superHello.gb # Rename this to what ever you want
-        tag: v0.0.1
-        body: Bonjour, addN, good night!
+        asset_name: supHello.gb # Rename this to what ever you want
+        tag: v0.0.2
+        body: how to make a scantron based gb game... a mystery
